@@ -1,0 +1,233 @@
+/* Google Fonts - Only Poppins and Oswald for hero name */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+/* Smooth scrolling and performance optimizations */
+html {
+  scroll-behavior: smooth;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Fallback for browsers that don't support smooth scrolling */
+@supports not (scroll-behavior: smooth) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+}
+
+/* Optimize animations for performance */
+@media (prefers-reduced-motion: no-preference) {
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  
+  .animate-fade-in-right {
+    animation: fadeInRight 0.8s ease-out forwards;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Smooth transitions for all interactive elements */
+button, a, .transition-all {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Remove all Fredoka font classes and keep only Poppins font classes */
+.font-poppins {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 500;
+}
+.font-poppins-light {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 300;
+}
+.font-poppins-regular {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 400;
+}
+.font-poppins-medium {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 500;
+}
+.font-poppins-semibold {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 600;
+}
+.font-poppins-bold {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 700;
+}
+.font-poppins-extrabold {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 800;
+}
+.font-poppins-black {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 900;
+}
+
+.font-oswald {
+  font-family: 'Oswald', Arial, sans-serif;
+}
+
+/* Optimize hover states */
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+.hover\:-translate-y-1:hover {
+  transform: translateY(-4px);
+}
+
+/* Performance optimizations for animations */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* Optimize GPU acceleration */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Smooth loading states */
+.loading-skeleton {
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Base styles for responsive design */
+@media (max-width: 768px) {
+  /* Adjust font sizes for smaller screens */
+  h1 {
+    font-size: 3rem; /* Smaller font size for H1 on small screens */
+  }
+  h2 {
+    font-size: 2rem; /* Smaller font size for H2 on small screens */
+  }
+  p {
+    font-size: 1rem; /* Smaller font size for paragraphs on small screens */
+  }
+}
+
+/* Adjustments for Hero section on small screens */
+@media (max-width: 768px) {
+  .min-h-screen {
+    min-height: auto; /* Allow height to adjust based on content */
+  }
+  .grid.lg:grid-cols-2 {
+    grid-template-columns: 1fr; /* Stack columns on small screens */
+  }
+  .space-y-8 {
+    margin-bottom: 2rem; /* Add some space below text content */
+  }
+  .animate-fade-in-up, .animate-fade-in-right {
+    animation: none; /* Disable animations on small screens for performance */
+  }
+  .relative.h-96.lg:h-\[500px\] {
+    height: auto; /* Adjust height of profile card container */
+  }
+  .relative.w-80.h-96.lg:w-96.lg:h-\[500px\] {
+    width: 100%; /* Make profile card full width */
+    height: auto; /* Adjust height of profile card */
+  }
+  .flex.flex-col.sm:flex-row.gap-4 {
+    flex-direction: column; /* Stack buttons vertically */
+  }
+}
+
+/* Adjustments for Navigation on small screens */
+@media (max-width: 768px) {
+  .md:hidden {
+    display: block; /* Show mobile menu button */
+  }
+  .hidden.md:flex {
+    display: none; /* Hide desktop navigation */
+  }
+  .md:block {
+    display: none; /* Hide desktop CTA button */
+  }
+}
+
+/* Adjustments for ProfileCard on small screens */
+@media (max-width: 768px) {
+  .profile-card-container {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* General padding and margin adjustments for small screens */
+@media (max-width: 768px) {
+  .max-w-6xl.mx-auto.px-6 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .gap-12 {
+    gap: 1rem;
+  }
+}
+
+
