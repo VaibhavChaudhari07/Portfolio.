@@ -40,7 +40,7 @@ const Hero = () => {
             </div>
 
             <p className="text-base sm:text-lg lg:text-xl text-gray-400 max-w-2xl leading-relaxed font-poppins">
-              A passionate 19-year-old Computer Engineering student from Maharashtra, India, 
+              A passionate Computer Engineering student from Maharashtra, India, 
               specializing in full-stack web development and AI/ML solutions. Currently pursuing 
               BTech at SVKM Institute of Technology, Dhule.
             </p>
@@ -72,7 +72,7 @@ const Hero = () => {
                 className="border-2 border-orange-500 text-orange-500 px-8 py-4 rounded-full font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-fredoka-title"
               >
                 <Download size={20} />
-                Download CV
+                Download Resume
               </a>
             </div>
           </div>
