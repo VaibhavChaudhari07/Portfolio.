@@ -74,7 +74,7 @@ const About = () => {
               </h3>
               <div className="space-y-4 text-gray-300 leading-relaxed">
                 <p>
-                  I'm a 19-year-old Computer Engineering student at SVKM Institute of Technology, Dhule, 
+                  I'm a Computer Engineering student at SVKM Institute of Technology, Dhule, 
                   currently in my 3rd year. My journey in technology began with curiosity about how things 
                   work and has evolved into a passion for creating innovative solutions using cutting-edge technologies.
                 </p>
